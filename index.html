@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/board.css">
+    <title>board</title>
+</head>
+
+<body>
+
+    <div style="position:absolute;width:100%;height:100%;z-index:5;">
+        
+        <div id="player-number">
+            <h1 class="heading">WELCOME TO SNAKE AND LADDER GAME</h1>
+            <input  type="text" placeholder="Enter number of player"/>
+            <input type="button" value="Start">
+        </div>
+    </div>
+   
+
+    <div class="board-main" >
+        <div class="dice">
+            <button id="dice">dice</button>
+        </div>
+        <div class="relative">
+            <div id="ladder-1" class="ladder"></div>
+            <div id="ladder-2" class="ladder"></div>
+            <div id="ladder-3" class="ladder"></div>
+            <div id="ladder-4" class="ladder"></div>
+
+            <div id="snake-1" class="snake">
+                <div class="snake-head"></div>
+                <div class="snake-body"></div>
+            </div>
+            <div id="snake-2" class="snake">
+                <div class="snake-head"></div>
+                <div class="snake-body"></div>
+            </div>
+            <div id="snake-3" class="snake">
+                <div class="snake-head"></div>
+                <div class="snake-body"></div>
+            </div>
+
+
+
+            <div id="red-token" class="token"></div>
+            <div id="green-token" class="token"></div>
+            <div id="blue-token" class="token"></div>
+            <div id="yellow-token" class="token"></div>
+            <div class="board">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="game-msg bg-success">
+        You Won!
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/board.js"></script>
+</body>
+
+</html>

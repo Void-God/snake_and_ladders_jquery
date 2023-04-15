@@ -1,0 +1,141 @@
+@import url("reset.css");
+body{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: orange;
+    /* background-image: url("../images/board.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+.board-main {
+    overflow-x: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.board {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(10,1fr);
+    width:85vmin;
+    height:85vmin;
+    
+    z-index:0;
+}
+.board-cell {
+    border:1px solid #888;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dodgerblue;
+    color:#fff;
+}
+
+button#dice{
+    height:50px;
+    width:50px;
+    margin-bottom: 12px;
+    background-color: 	#c7ff99;
+    border:1px solid #888;
+    color:#000;    
+
+}
+.relative{
+    position:relative;
+}
+.token {
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    position:absolute;
+    border-radius: 50%;
+    z-index:5;
+    right:100vw;
+}
+#red-token {
+    background-color: #9b0000;    
+}
+#blue-token {
+    background-color: #00008B;
+}
+#green-token {
+    background-color: #097969;
+    
+}
+#yellow-token {
+    background: #e4d00a;
+}
+
+/* game message css */
+
+.game-msg {
+    position:fixed;
+    padding:5px;
+    top:20px;
+    left:20px;
+    color:#fff;
+    display:none;
+}
+
+
+/* ladder css */
+.ladder{
+    position:absolute;
+    background-image: url("../images/ladder.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+    z-index:3;
+}
+
+/* snake css */
+.snake{
+    position:absolute;
+    z-index:2;
+    
+}
+.snake-head {
+    height:40px;
+    background-image: url("../images/snake_head.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.snake-body {
+    background-image: url("../images/snake_body.png");
+    background-size:contain;
+    background-repeat: repeat-y;
+
+}
+/* snake css ends */
+
+
+/* player input box css */
+#player-number {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#player-number > input[type="text"]{
+    padding:8px 10px;
+    border-radius: 6px;
+    border:1px solid #000;
+    margin-bottom: 20px;  
+}
+#player-number > input[type="button"]{
+    padding:8px 10px;
+    border-radius: 6px;
+    border:1px solid #000   
+}
+.heading {
+    font-size:20px;
+    font-weight:400;
+    color:	#630f0f;
+    margin-bottom:20px;
+    text-align: center;
+}
